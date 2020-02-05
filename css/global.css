@@ -6,6 +6,9 @@
  For example, when creating a button, set the button's class/id to what is specified in this file
     so that it will inherit the global style
 
+ If we reference each colour in HTML as a class (example: ".mainColour" and then define the classes in CSS,
+ we'll be able to instantly change the colours of our website.
+
  For Selector Reference: https://www.w3schools.com/cssref/css_selectors.asp
     
     Classes are selected with a period. For example:
@@ -30,6 +33,9 @@
     --main-red: DF3742;
 
     --calendar-red: E66A6B;
+
+    /* For debugging: */
+    /* border: 1px solid red; */
 }
 
 body {
@@ -39,16 +45,98 @@ body {
 }
 
 .header {
-    flex: 0 auto;
     display: flex;
+    height: 5em;
+    background-color: var(--main-black);
+}
+
+.header > .left {
+    width: 26em;
+    display: flex;
+}
+
+.header #header-logo {
+    margin: auto;
+    width: 16em;
+    display: flex;
+}
+.header > .left > a {
+    margin: auto;
+}
+
+.header > .middle {
+    justify-content: start;
+}
+
+.header > .middle > a {
+    padding: .3em;
+    padding-left: .5em;
+    padding-right: .5em;
+
+    border-radius: .3em;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+    .header > .middle > a:hover {
+        background-color: var(--main-red);
+    }
+
+.header > .right {
+    width: 15em;
+}
+
+.footer {
+    flex: none;
 }
 
 .content {
     flex: auto;
     display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .footer {
     flex: 0 auto;
     display: flex;
+}
+
+.flex {
+    flex: auto;
+    display: flex;
+}
+
+.rounded {
+    border-radius: 1em;
+}
+
+.shadow-small {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+}
+
+.shadow-medium {
+    box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.21);
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-weight: lighter;
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-weight: lighter;
 }
